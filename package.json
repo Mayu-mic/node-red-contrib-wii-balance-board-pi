@@ -1,0 +1,41 @@
+{
+  "name": "node-red-contrib-wii-balance-board-pi",
+  "version": "1.0.0",
+  "description": "Wii balance board client for Node-RED",
+  "main": "dist/nodes/wii-balance-board.js",
+  "scripts": {
+    "build": "npm run copy:html && tsc",
+    "copy:html": "mkdir -p dist/nodes/ && cpx \"nodes/*.html\" \"dist/nodes/\"",
+    "clean": "rimraf ./dist",
+    "install:dependency": "sudo apt install --assume-yes bluez python-bluez python-gobject python-dbus",
+    "postinstall": "npm-run-all install:dependency build"
+  },
+  "node-red": {
+    "nodes": {
+      "wii-balance-board": "dist/nodes/wii-balance-board.js"
+    }
+  },
+  "keywords": [],
+  "author": "Ryo Koizumi <koizumiryo@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mayu-mic/node-red-contrib-wii-balance-board-pi.git"
+  },
+  "devDependencies": {
+    "@types/node-red": "^1.1.1",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "cpx": "^1.5.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "wii-balance-board-pi": "^1.1.2"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "outDir": "./dist/nodes",
+    "rootDir": "nodes",
+    "lib": ["ESNext", "dom"],
+    "moduleResolution": "node",
+    "typeRoots": [
+      "node_modules/@types",
+    ],
+    "paths": {
+      "wii-balance-board-pi": ["types/wii-balance-board-pi.d.ts"]
+    },
+    "declaration": false,
+    "sourceMap": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true
+  },
+  "compileOnSave": true
+}
