@@ -20,6 +20,7 @@ module.exports = (RED: NodeAPI) => {
       this.status({ fill: 'yellow', text: 'connecting...' })
 
       const balance = new BalanceBoard()
+      balance.connect()
 
       balance.on('data', (data) => {
         if (data.connected) {
