@@ -1,5 +1,5 @@
 import { Node, NodeAPI, NodeDef } from 'node-red'
-import { BalanceBoard } from 'wii-balance-board-pi'
+import BalanceBoard from 'wii-balance-board-pi'
 
 const DELAY = 2000
 

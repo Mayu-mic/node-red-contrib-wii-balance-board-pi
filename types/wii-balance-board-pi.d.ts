@@ -17,4 +17,6 @@ declare module 'wii-balance-board-pi' {
     isConnected(): boolean
     disconnect(): void
   }
+
+  export default BalanceBoard
 }
