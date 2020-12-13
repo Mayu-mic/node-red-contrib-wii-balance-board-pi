@@ -10,7 +10,7 @@
       "node_modules/@types",
     ],
     "paths": {
-      "wii-balance-board-pi": ["types/wii-balance-board-pi.d.ts"]
+      "wii-balance-board-pi": ["./types/wii-balance-board-pi.d.ts"]
     },
     "declaration": false,
     "sourceMap": true,
